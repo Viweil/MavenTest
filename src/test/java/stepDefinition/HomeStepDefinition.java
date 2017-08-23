@@ -12,15 +12,15 @@ public class HomeStepDefinition {
 
 	WebDriver driver;
 	
-	@Given("^I go to \"([^\"]*)\"$")
-	public void i_go_to(String arg1) {
+	@Given("^I go to Crazy Hat$")
+	public void i_go_to_Crazy_Hat() throws Throwable {
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.navigate().to("http://ec2-35-176-202-196.eu-west-2.compute.amazonaws.com/CrazyHatProject/");
 	}
 
-	@Then("^I should be on \"([^\"]*)\" Home Page$")
-	public void i_should_be_on_Home_Page(String arg1) {
+	@Then("^I should be on Crazy Hat Home Page$")
+	public void i_should_be_on_Crazy_Hat_Home_Page() throws Throwable {
 		Assert.assertTrue(driver.getTitle().contains("CRAZY HATS")); 
 		driver.close();
 	}
