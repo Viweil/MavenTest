@@ -13,7 +13,7 @@ public class HomeStepDefinition {
 	
 	@Given("^I go to Crazy Hat$")
 	public void i_go_to_Crazy_Hat() throws Throwable {
-		System.setProperty("webdriver.chrome.driver", "chromedriver");
+		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
 		driver = new ChromeDriver();
 		driver.navigate().to("http://ec2-35-176-202-196.eu-west-2.compute.amazonaws.com/CrazyHatProject/");
 	}
